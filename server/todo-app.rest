@@ -1,0 +1,50 @@
+### GET / (endpoint) to see if the page loads
+GET http://localhost:5177
+
+### POST /auth/register (endpoint) user sign up
+POST http://localhost:5177/auth/register
+Content-Type: application/json
+
+{
+    "username": "alex1200@gmail.com",
+    "password": "123xyz"
+}
+
+### POST /auth/login (endpoint) user log in
+POST http://localhost:5177/auth/login
+Content-Type: application/json
+
+{
+    "username": "alex1200@gmail.com",
+    "password": "123xyz"
+}
+
+### GET /todos (protected endpoint) all of users todos
+GET http://localhost:5177/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
+
+### POST /todos (protected endpoint) new todo
+POST http://localhost:5177/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
+Content-type: application/json
+
+{
+    "task" : "Get eggs later",
+    "completed": 0
+}
+
+
+### PUT /todos/:id (protected endpoint) update a  todo
+PUT http://localhost:5177/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
+Content-type: application/json 
+
+{
+    "completed": 1
+}
+
+### DELETE /todos/:id (protected endpoint) delete a todo
+DELETE http://localhost:5177/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
+
+
