@@ -1,7 +1,7 @@
 # Full-Stack Todo App
 _A complete full-stack application built with React, Node.js, Express, SQLite, and JWT authentication._
 
-This project demonstrates my ability to architect and implement a full-stack web application from scratch — including secure authentication, protected API routes, stateful React UI, and SQL-backed data persistence (in-memory for local development).
+This project demonstrates my ability to architect and implement a full-stack web application from scratch, including secure authentication, protected API routes, stateful React UI, and SQL-backed data persistence (in-memory for local development).
 
 > **Note:** This application runs locally via dev tools.  
 > It is intentionally not deployed yet.
