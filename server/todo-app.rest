@@ -1,8 +1,8 @@
 ### GET / (endpoint) to see if the page loads
-GET http://localhost:5177
+GET http://localhost:<PORT>
 
 ### POST /auth/register (endpoint) user sign up
-POST http://localhost:5177/auth/register
+POST http://localhost:<PORT>/auth/register
 Content-Type: application/json
 
 {
@@ -11,7 +11,7 @@ Content-Type: application/json
 }
 
 ### POST /auth/login (endpoint) user log in
-POST http://localhost:5177/auth/login
+POST http://localhost:<PORT>/auth/login
 Content-Type: application/json
 
 {
@@ -20,12 +20,12 @@ Content-Type: application/json
 }
 
 ### GET /todos (protected endpoint) all of users todos
-GET http://localhost:5177/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
+GET http://localhost:<PORT>/todos
+Authorization: <token>
 
 ### POST /todos (protected endpoint) new todo
-POST http://localhost:5177/todos
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
+POST http://localhost:<PORT>/todos
+Authorization: <token>
 Content-type: application/json
 
 {
@@ -35,8 +35,8 @@ Content-type: application/json
 
 
 ### PUT /todos/:id (protected endpoint) update a  todo
-PUT http://localhost:5177/todos/2
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
+PUT http://localhost:<PORT>/todos/2
+Authorization: <token>
 Content-type: application/json 
 
 {
@@ -44,7 +44,6 @@ Content-type: application/json
 }
 
 ### DELETE /todos/:id (protected endpoint) delete a todo
-DELETE http://localhost:5177/todos/2
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzY0NTQ3MzE2LCJleHAiOjE3NjQ2MzM3MTZ9.7pOFrkA5QqE75gecVR8y9oS3a-SCVjsNZ862nA2mbgw
-
+DELETE http://localhost:<PORT>/todos/2
+Authorization: <token>
 
